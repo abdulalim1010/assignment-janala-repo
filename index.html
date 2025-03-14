@@ -21,9 +21,12 @@
         </div>
         <div class="flex-none">
           <ul class="menu menu-horizontal px-1 gap-3">
-            <button class="btn"> <img src="assets/fa-circle-question.png" alt=""> FAQ</button>
-            <button class="btn"> <img src="assets/fa-book-open.png" alt="">Learn</button>
-            <button class="btn"><img src="assets/fa-arrow-right-from-bracket.png" alt="">Logout</button>
+            <button class="btn hover:bg-[#422AD5] hover:text-white"> <img src="assets/fa-circle-question.png" alt="">
+              FAQ</button>
+            <button class="btn hover:bg-[#422AD5] hover:text-white"> <img src="assets/fa-book-open.png"
+                alt="">Learn</button>
+            <button class="btn hover:bg-[#422AD5] hover:text-white"><img src="assets/fa-arrow-right-from-bracket.png"
+                alt="">Logout</button>
 
           </ul>
         </div>
@@ -32,7 +35,7 @@
   </header>
   <main>
     <!-- hero section -->
-    <div class="flex  justify-between items-center space-y-5 px-10 ">
+    <div class=" lg:flex  justify-between items-center space-y-5 px-10 ">
       <div>
         <h1 class=" text-4xl font-bold"><span class="text-[#00BCFF] text-4xl font-bold">English</span> is Easy!!</h1>
         <p class="text-xl text-[#18181B] py-3">আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা <br>
@@ -41,12 +44,14 @@
           বাড়াতে চান, আমাদের Interactive
           Lessons
           আপনাকে নিয়ে যাবে অন্য একটি Level এ</p>
-        <div class="py-3 space-y-3"><input class="px-3 py-1 rounded" type="text" placeholder="enter your name">
+        <div class="py-3 space-y-3">
+          <input id="name" class="px-3 py-1 rounded" type="text" placeholder="enter your name">
           <br>
 
-          <input class="px-3 py-1 rounded" type="password" id="pwd" name="pwd" placeholder="enter your password">
+          <input id="password" class="px-3 py-1 rounded" type="password" id="pwd" name="pwd"
+            placeholder="enter your password">
           <br>
-          <button class="btn btn-primary">Get started</button>
+          <button id="getstar" class="btn btn-primary">Get started</button>
         </div>
       </div>
       <div>
@@ -55,7 +60,39 @@
       </div>
 
     </div>
+    <section id="all-lesson">
+
+    </section>
   </main>
+
+
+
+
+
+  <footer>
+    <div class="flex justify-between p-9 mt-60">
+      <div>
+        <a class="btn btn-ghost text-xl">English <img src="assets/logo.png" alt="">
+          জানালা</a>
+        <br>
+        <div>
+          <h2 class="text-3xl font-bold pt-3">ইংরেজি শিখুন সহজে</h2>
+        </div>
+        <br>
+        <p>Providing ED-Tech Applications since 2025</p>
+      </div>
+      <div class="space-y-4">
+        <p class="text-sm">Follow us</p>
+
+        <div class="flex gap-3">
+          <img src="assets/fb-thumb.png" alt="">
+          <img src="assets/instagram-thumb.png" alt="">
+          <img src="assets/youtube-thumb.png" alt="">
+
+        </div>
+      </div>
+    </div>
+  </footer>
 
   <script src="index.js"></script>
 </body>
