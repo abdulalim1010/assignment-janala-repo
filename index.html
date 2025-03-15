@@ -60,9 +60,59 @@
       </div>
 
     </div>
-    <section id="all-lesson">
+    <div class="flex justify-center items-center p-10 text-3xl font-bold">
+      <h1><span class="text-[#00BCFF] text-3xl font-bold">Let's</span> Learn Vocabularies</h1>
+    </div>
+    <section id="lesson-container" class="flex  justify-center gap-3">
 
     </section>
+
+
+
+    <div class="justify-center items-center p-10 text-xl font-semibold">
+      <h1 class="flex justify-center items-center p-10 text-3xl font-bold"><span
+          class="text-[#00BCFF] text-3xl font-bold">Frequently</span> Asked Questions</h1>
+      <div class="collapse collapse-plus bg-base-100 border border-base-300">
+        <input type="radio" name="my-accordion-3" checked="checked" />
+        <div class="collapse-title font-semibold">the difference between `var`, `let`, and `const`</div>
+        <div class="collapse-content text-sm">
+          Use let and const instead of var to avoid issues related to scope and hoisting. const is typically used for
+          variables
+          whose values won't change, while let is for variables that can be reassigned.
+        </div>
+      </div>
+      <div class="collapse collapse-plus bg-base-100 border border-base-300">
+        <input type="radio" name="my-accordion-3" />
+        <div class="collapse-title font-semibold">
+          the difference between `map()`, `forEach()`, and `filter()`
+        </div>
+        <div class="collapse-content text-sm">
+
+          map(): Use when need a modified version of the original array (e.g., transforming data).
+          forEach(): Use when just want to perform an action (e.g., logging or modifying external variables) on each
+          element,
+          but don't need a new array.
+          filter(): Use when need a new array with only the elements that pass a condition (e.g., extracting items that
+          meet
+          certain criteria).
+        </div>
+      </div>
+      <div class="collapse collapse-plus bg-base-100 border border-base-300">
+        <input type="radio" name="my-accordion-3" />
+        <div class="collapse-title font-semibold">
+          explain arrow functions and how they are different from regular functions
+        </div>
+        <div class="collapse-content text-sm">
+          In general, arrow functions are great for simple, concise functions, especially in callbacks and where this
+          should refer
+          to the surrounding context. Regular functions are better suited for object methods, constructors, and
+          situations
+          requiring access to the arguments object.
+
+        </div>
+      </div>
+
+    </div>
   </main>
 
 
