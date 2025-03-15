@@ -14,7 +14,7 @@
 <body>
   <header>
     <nav>
-      <div class="navbar bg-base-100 shadow-sm justify-around mt-9 px-10">
+      <div class="navbar bg-[#79716B20] shadow-sm justify-around mt-9 px-10">
         <div class="flex-1">
           <a class="btn btn-ghost text-xl">English <img src="assets/logo.png" alt="">
             জানালা</a>
@@ -63,9 +63,21 @@
     <div class="flex justify-center items-center p-10 text-3xl font-bold">
       <h1><span class="text-[#00BCFF] text-3xl font-bold">Let's</span> Learn Vocabularies</h1>
     </div>
-    <section id="lesson-container" class="flex  justify-center gap-3">
+    <!-- get all lesson -->
+    <section id="lesson-container" class="flex  justify-center gap-3 ">
+
 
     </section>
+    <section id="word-container" class="grid grid-cols-3 gap-4 bg-[#79716B20] w-10/12 mx-auto mt-10">
+      <p></p>
+
+    </section>
+
+    <!-- sow lesson select -->
+    <div class="p-10 mt-28 bg-[#79716B20] w-11/12 space-y-3 justify-center items-center rounded-2xl mx-auto">
+      <p class=" flex justify-center items-center text-sm text-[#79716B] ">আপনি এখনো কোন Lesson Select করেন ন</p>
+      <h1 class=" flex justify-center items-center font-bold text-3xl fondt-bold ">একটি Lesson Select করুন।</h1>
+    </div>
 
 
 
@@ -74,7 +86,7 @@
           class="text-[#00BCFF] text-3xl font-bold">Frequently</span> Asked Questions</h1>
       <div class="collapse collapse-plus bg-base-100 border border-base-300">
         <input type="radio" name="my-accordion-3" checked="checked" />
-        <div class="collapse-title font-semibold">the difference between `var`, `let`, and `const`</div>
+        <div class="collapse-title font-semibold">the difference between `var`, `let`, and `const`?</div>
         <div class="collapse-content text-sm">
           Use let and const instead of var to avoid issues related to scope and hoisting. const is typically used for
           variables
@@ -84,7 +96,7 @@
       <div class="collapse collapse-plus bg-base-100 border border-base-300">
         <input type="radio" name="my-accordion-3" />
         <div class="collapse-title font-semibold">
-          the difference between `map()`, `forEach()`, and `filter()`
+          the difference between `map()`, `forEach()`, and `filter()`?
         </div>
         <div class="collapse-content text-sm">
 
@@ -100,7 +112,7 @@
       <div class="collapse collapse-plus bg-base-100 border border-base-300">
         <input type="radio" name="my-accordion-3" />
         <div class="collapse-title font-semibold">
-          explain arrow functions and how they are different from regular functions
+          explain arrow functions and how they are different from regular functions?
         </div>
         <div class="collapse-content text-sm">
           In general, arrow functions are great for simple, concise functions, especially in callbacks and where this
@@ -109,6 +121,32 @@
           situations
           requiring access to the arguments object.
 
+        </div>
+      </div>
+      <div class="collapse collapse-plus bg-base-100 border border-base-300">
+        <input type="radio" name="my-accordion-3" />
+        <div class="collapse-title font-semibold">
+          how JavaScript Promises work
+        </div>
+        <div class="collapse-content text-sm">
+          Promises are a powerful tool for managing asynchronous operations in JavaScript. By using .then(), .catch(),
+          and
+          chaining, you can handle asynchronous tasks in a more readable and maintainable way compared to traditional
+          callback
+          functions. Additionally, Promise.all(), Promise.race(), Promise.allSettled(), and Promise.any() give you
+          advanced
+          options for dealing with multiple asynchronous operations.
+
+        </div>
+      </div>
+      <div class="collapse collapse-plus bg-base-100 border border-base-300">
+        <input type="radio" name="my-accordion-3" />
+        <div class="collapse-title font-semibold">
+          how closures work in JavaScript?
+        </div>
+        <div class="collapse-content text-sm">
+          A closure is a function that has access to its own scope, the scope of the outer function, and the global
+          scope.
         </div>
       </div>
 
@@ -120,7 +158,7 @@
 
 
   <footer>
-    <div class="flex justify-between p-9 mt-60">
+    <div class="flex justify-between border-t-2 p-9 mt-60">
       <div>
         <a class="btn btn-ghost text-xl">English <img src="assets/logo.png" alt="">
           জানালা</a>

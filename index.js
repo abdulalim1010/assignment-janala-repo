@@ -25,7 +25,7 @@
                     throw new Error('Network response was not ok ' + response.statusText);
                 }
                 const data = await response.json();
-                console.log(data); // Log all the fetched data for inspection
+              // Log all the fetched data for inspection
                 if (data.status) {
                     showlesson(data.data); // Pass fetched data to showlesson function
                 } else {
@@ -53,8 +53,75 @@
 
                 lessonContainer.appendChild(lessonItem);
             });
-        };
+};
 
-        // Call the getAlllesson function to fetch and display the data
+const getWord = async () => {
+    try {
+        const response = await fetch('https://openapi.programming-hero.com/api/level/3');
+        const showWord = await response.json();
+
+        // Log the entire response to inspect the structure
+        console.log(showWord);
+
+        if (showWord.status) {
+            // If the response has a "data" field containing the words
+            if (showWord.data && Array.isArray(showWord.data)) {
+                // Call showWord to display the words
+                displayWords(showWord.data); 
+            } else {
+                console.log('No words found in data.');
+            }
+        } else {
+            console.log('Error fetching data or no words available.');
+        }
+    } catch (error) {
+        console.error('Error fetching data:', error);
+    }
+};
+
+// Function to display the words
+const displayWords = (words) => {
+    const wordContainer = document.getElementById('word-container');
+    wordContainer.innerHTML = ''; // Clear previous content
+
+    // Loop through the fetched words and display them in the container
+    words.forEach(word => {
+        const wordItem = document.createElement('div');
+        wordItem.classList.add('word-item');
+        wordItem.innerHTML = `
+          
+
+            <div class="card  bg-base-100  card-body items-center p-3 rounded-xl  shadow-sm">
+ 
+
+      <p class="text-xl font-bold"><strong class="text-2xl">Word:</strong> ${word.word}</p>
+      
+            <p class="text-xl font-bold"><strong>Meaning:</strong> ${word.meaning ? word.meaning : 'No meaning available'}</p>
+            
+
+            <p class="text-xl><strong class="text-xl font-bold">Pronunciation:</strong> ${word.pronunciation}</p>
+            
+<div class="flex justify-between gap-14 p-5">
+  <img class="w-9 h-8" src="assets/speaker (1).png" alt="">
+    <img class="w-9 h-8" src="assets/volume.png" alt="">
+
+</div>
+
+
+            
+
+
+
+     
+  
+</div>
+        `;
+        wordContainer.appendChild(wordItem);
+    });
+};
+
+// Call the function to fetch and display the words
+getWord();
+
         getAlllesson();
  
