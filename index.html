@@ -8,6 +8,11 @@
   <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
 
 </head>
 
@@ -21,7 +26,7 @@
         </div>
         <div class="flex-none">
           <ul class="menu menu-horizontal px-1 gap-3">
-            <button class="btn hover:bg-[#422AD5] hover:text-white"> <img src="assets/fa-circle-question.png" alt="">
+            <button class="btn hover:bg-[#422AD5] hover:text-white "> <img src="assets/fa-circle-question.png" alt="">
               FAQ</button>
             <button class="btn hover:bg-[#422AD5] hover:text-white"> <img src="assets/fa-book-open.png"
                 alt="">Learn</button>
@@ -70,16 +75,23 @@
 
 
     </section>
-    <section class="flex grid grid-cols-3 bg-gray-100 gap-3 w-11/12 mx-auto p-5 mt-10" id="word-container">
-      <button onclick=" loadWord()">all</button>
+    <section class=" grid grid-cols-3 bg-gray-100 gap-3 w-11/12 mx-auto p-5 mt-10" id="word-container">
+
     </section>
 
     <!-- sow lesson select -->
-    <div class="p-10 mt-28 bg-[#79716B20] w-11/12 space-y-3 justify-center items-center rounded-2xl mx-auto">
+    <div id="start-time"
+      class="p-10 mt-28 bg-[#79716B20] w-11/12 space-y-3 justify-center items-center rounded-2xl mx-auto">
       <p class=" flex justify-center items-center text-sm text-[#79716B] ">আপনি এখনো কোন Lesson Select করেন ন</p>
       <h1 class=" flex justify-center items-center font-bold text-3xl fondt-bold ">একটি Lesson Select করুন।</h1>
     </div>
 
+    <div id="no-word"
+      class="text-center bg-gray-100 w-11/12 mx-auto p-10 space-y-6  rounded-xl text-xl font-semibold text-gray-600 hidden">
+      <img class="mx-auto" src="assets/alert-error.png" alt="">
+      <p>এই Lesson এ এখনো কোন Vocabulary যুক্ত করা হয়নি।</p>
+      <h2 class="text-3xl">নেক্সট Lesson এ যান</h2>
+    </div>
 
 
     <div class="justify-center items-center p-10 text-xl font-semibold">
