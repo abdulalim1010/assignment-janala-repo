@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Fetch Example</title>
+</head>
+
+<body>
+  <h1>Search Vocabulary Levels</h1>
+
+  <label for="searchTerm">Enter Lesson Name:</label>
+  <input type="text" id="searchTerm" placeholder="Search lesson...">
+  <button id="searchButton">Search</button>
+
+  <ul id="levelList"></ul>
+
+  <script>
+    // Function to fetch and display data based on the search term
+    const fetchLevels = async (searchQuery) => {
+      // Construct URL with search query (if available)
+      let url = 'https://openapi.programming-hero.com/api/levels/all';
+
+      // You can modify the URL here to be dynamic based on the query if needed.
+      if (searchQuery) {
+        url += `?search=${searchQuery}`;  // Assuming API supports search parameter
+      }
+
+      const response = await fetch(url);
+      if (response.ok) {
+        const data = await response.json();
+        const levelList = document.getElementById('levelList');
+        levelList.innerHTML = ''; // Clear previous results
+
+        // Loop through the data and add each level as a list item
+        data.data.forEach(level => {
+          const listItem = document.createElement('li');
+          listItem.textContent = `Level ${level.level_no}: ${level.lessonName}`;
+          levelList.appendChild(listItem);
+        });
+      } else {
+        console.error('Error fetching data:', response.statusText);
+      }
+    };
+
+    // Event listener for the search button
+    document.getElementById('searchButton').addEventListener('click', () => {
+      const searchTerm = document.getElementById('searchTerm').value;
+      fetchLevels(searchTerm);
+    });
+  </script>
+</body>
+
+</html>
