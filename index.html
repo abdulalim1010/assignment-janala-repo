@@ -30,9 +30,7 @@
               FAQ</button>
             <button class="btn hover:bg-[#422AD5] hover:text-white"> <img src="assets/fa-book-open.png"
                 alt="">Learn</button>
-            <button class="btn hover:bg-[#422AD5] hover:text-white"><img src="assets/fa-arrow-right-from-bracket.png"
-                alt="">Logout</button>
-
+            <button id="log-out" class="btn btn-danger hover:bg-[#422AD5] hover:text-white">Log Out</button>
           </ul>
         </div>
       </div>
@@ -65,12 +63,18 @@
       </div>
 
     </div>
+    <div id="loading-spinner" class="hidden flex justify-center items-center py-5">
+      <div class="animate-spin rounded-full h-10 w-10 border-t-4 border-blue-500 border-solid"></div>
+    </div>
+    <div id="logout-card"
+      class="card absolute w-80 top-10 left-1/2 transform -translate-x-1/2 p-6  bg-green-100 border border-green-500 rounded-md shadow-md text-center hidden">
+      <h2 class="text-2xl font-bold text-green-700">Logout Successful</h2>
+      <p>You have been logged out successfully.</p>
+    </div>
     <div class="flex justify-center items-center p-10 text-3xl font-bold">
       <h1><span class="text-[#00BCFF] text-3xl font-bold">Let's</span> Learn Vocabularies</h1>
     </div>
-
-
-    <!-- get all lesson -->
+    > <!-- get all lesson -->
     <section id="lesson-container" class="flex gap-4 justify-center">
 
 
@@ -164,6 +168,7 @@
       </div>
 
     </div>
+
   </main>
 
 

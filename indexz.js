@@ -15,10 +15,22 @@ alert('wrong password please contact to the client.');
 return;
 }
 
-alert('Welcome, ' + name + '! Your password is valid.');
+  alert('Welcome, ' + name + '! Your password is valid.   ');
 });
 
+document.getElementById('log-out').addEventListener('click', function () {
+    const logoutCard = document.getElementById('logout-card');
 
+    // Show the logout card by removing 'hidden' and adding 'block'
+    logoutCard.classList.remove("hidden");
+    logoutCard.classList.add("block");
+
+    // Hide the card after 3 seconds
+    setTimeout(() => {
+        logoutCard.classList.remove("block");
+        logoutCard.classList.add("hidden");
+    }, 3000);
+});
 
 
 
@@ -153,7 +165,7 @@ const displayWor = (data) => {
 };
   
 
-loadWord()
+
 loadLesson()
 
  
